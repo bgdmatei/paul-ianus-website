@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: PopLight;
+  src: url("./fonts/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: PopRegular;
+  src: url("./fonts/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: MonsLight;
+  src: url("./fonts/Montserrat-Light.ttf");
+}
+
+body {
+  font-family: PopLight;
+}
+
+.portfolio {
+  color: #fff;
+  background: radial-gradient(rgba(80, 80, 80, 1), rgba(24, 24, 24, 1));
+}
+
+nav {
+  min-height: 10vh;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+}
+
+.hero {
+  overflow: hidden;
+  height: 500px;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+
+.hero img {
+  height: 500px;
+  transition: transform 0.3s ease-out;
+  cursor: pointer;
+}
+
+.model-right {
+  transform: translate(0%, 10%);
+}
+.model-left {
+  transform: translate(0%, -10%);
+}
+
+.hero:hover .model-right {
+  transform: translate(0%, 0%);
+}
+
+.hero:hover .model-left {
+  transform: translate(0%, 0%);
+}
+
+.details {
+  grid-column: 2/3;
+  align-self: flex-end;
+}
+
+.details h1 {
+  font-size: 64px;
+  font-family: PopRegular;
+}
+
+.details h2 {
+  font-size: 42px;
+  font-family: PopLight;
+  padding: 20px 0px 50px 0px;
+}
