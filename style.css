@@ -88,3 +88,20 @@ nav {
   font-family: PopLight;
   padding: 20px 0px 50px 0px;
 }
+
+.logo path:nth-child(2) {
+  animation: clip 1s ease-out;
+  transform-origin: center;
+}
+
+@keyframes clip {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(40deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
