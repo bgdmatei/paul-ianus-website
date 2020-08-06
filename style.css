@@ -1,3 +1,4 @@
+@import "./unknwn.css";
 *,
 *::before,
 *::after {
@@ -7,8 +8,8 @@
 }
 
 @font-face {
-  font-family: Cano;
-  src: url("./fonts/Canonatia.ttf");
+  font-family: Cali;
+  src: url("./fonts/Calligraffitti-Regular.ttf");
 }
 @font-face {
   font-family: PopLight;
@@ -56,9 +57,10 @@ nav {
   grid-column: 3/4;
 }
 
-.hero h1 {
-  font-size: 124px;
-  font-family: Cano;
+.hero svg {
+  margin-top: 20px;
+
+  font-family: Cali;
   letter-spacing: 0.5rem;
 }
 
@@ -67,7 +69,7 @@ nav {
   font-family: MonsLight;
 }
 
-svg path:nth-child(2) {
+.logo path:nth-child(2) {
   animation: clip 1s ease-out;
   transform-origin: center;
 }
