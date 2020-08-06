@@ -8,16 +8,12 @@
 }
 
 @font-face {
-  font-family: Cali;
-  src: url("./fonts/Calligraffitti-Regular.ttf");
+  font-family: Paris;
+  src: url("./fonts/Parisienne-Regular.ttf");
 }
 @font-face {
   font-family: PopLight;
   src: url("./fonts/Poppins-Light.ttf");
-}
-@font-face {
-  font-family: PopRegular;
-  src: url("./fonts/Poppins-Regular.ttf");
 }
 @font-face {
   font-family: MonsLight;
@@ -52,21 +48,14 @@ nav {
 .hero {
   height: 500px;
   text-align: center;
-  align-self: flex-end;
+  align-self: center;
   justify-self: center;
   grid-column: 3/4;
 }
 
-.hero svg {
-  margin-top: 20px;
-
-  font-family: Cali;
-  letter-spacing: 0.5rem;
-}
-
 .hero h2 {
-  font-size: 64px;
-  font-family: MonsLight;
+  font-size: 112px;
+  font-family: Paris;
 }
 
 .pages {
@@ -102,8 +91,8 @@ nav {
 }
 
 .logo path:nth-child(2) {
-  animation: clip 1s ease-out;
   transform-origin: center;
+  animation: clip 1s ease-in-out;
 }
 
 @keyframes dot {
@@ -149,7 +138,7 @@ nav {
 }
 
 .nav-open h3 {
-  nav-size: 28px;
+  font-size: 28px;
   padding-bottom: 40px;
 }
 
