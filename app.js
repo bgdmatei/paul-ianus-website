@@ -8,9 +8,13 @@ function init() {
   const slides = document.querySelectorAll(".slide");
   const pages = document.querySelectorAll(".page");
 
+  //Tracker
+  let current = 0;
+
   slides.forEach((slide, index) => {
     slide.addEventListener("click", function () {
       changeDots(this);
+      nextSlide(index);
     });
   });
 
@@ -19,6 +23,11 @@ function init() {
       slide.classList.remove("active");
     });
     dot.classList.add("active");
+  }
+
+  function nextSlide(pageNumber) {
+    const nextPage = pages[pageNumber];
+    const currentPage = pages[current];
   }
 }
 
