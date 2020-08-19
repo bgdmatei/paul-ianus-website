@@ -153,6 +153,10 @@ nav {
   padding: 0px 20px;
 }
 
+.menu {
+  cursor: pointer;
+}
+
 .logo,
 .menu {
   z-index: 2;
