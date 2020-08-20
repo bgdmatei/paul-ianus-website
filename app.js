@@ -28,6 +28,24 @@ function init() {
   function nextSlide(pageNumber) {
     const nextPage = pages[pageNumber];
     const currentPage = pages[current];
+    const title = currentPage.querySelector(".hero");
+    const booking = nextPage.querySelector(".email");
+
+    const tl = new TimelineMax();
+
+    tl.fromTo(
+      currentPage,
+      0.3,
+      { opacity: 1, pointerEvents: "all" },
+      { opacity: 0, pointerEvents: "none" }
+    ).fromTo(
+      nextPage,
+      0.3,
+      { opacity: 0, pointerEvents: "none" },
+      { opacity: 1, pointerEvents: "all" }
+    );
+
+    currentPage = pageNumber;
   }
 
   const menu = document.querySelector(".menu");

@@ -58,6 +58,19 @@ nav {
   font-family: Paris;
 }
 
+.email {
+  height: 500px;
+  text-align: center;
+  align-self: flex-start;
+  justify-self: center;
+  grid-column: 3/4;
+}
+
+.email h2 {
+  font-size: 112px;
+  font-family: Paris;
+}
+
 .pages {
   position: absolute;
   right: 5%;
