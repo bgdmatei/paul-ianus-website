@@ -29,23 +29,31 @@ function init() {
     const nextPage = pages[pageNumber];
     const currentPage = pages[current];
     const title = currentPage.querySelector(".hero");
-    const booking = nextPage.querySelector(".email");
+    const booking = currentPage.querySelector(".email");
+    const titleNext = nextPage.querySelector(".hero");
+    const bookingNext = nextPage.querySelector(".email");
 
     const tl = new TimelineMax();
 
-    tl.fromTo(
-      currentPage,
-      0.3,
-      { opacity: 1, pointerEvents: "all" },
-      { opacity: 0, pointerEvents: "none" }
-    ).fromTo(
-      nextPage,
-      0.3,
-      { opacity: 0, pointerEvents: "none" },
-      { opacity: 1, pointerEvents: "all" }
-    );
+    tl.fromTo(title, 0.3, { y: "0%" }, { y: "-100%" })
+      .fromTo(booking, 0.3, { y: "-140%" }, { y: "0%" })
+      .fromTo(
+        currentPage,
+        0.3,
+        { opacity: 1, pointer: "none" },
+        { opacity: 0, pointer: "none" }
+      )
+      .fromTo(
+        nextPage,
+        0.3,
+        { opacity: 0, pointer: "none" },
+        { opacity: 1, pointer: "none" },
+        "-=0.3"
+      )
+      .fromTo(titleNext, 0.3, { y: "-100%" }, { y: "0%" }, "-=0.2")
+      .fromTo(bookingNext, 0.3, { y: "0%" }, { y: "-140%" }, "-=0.5");
 
-    currentPage = pageNumber;
+    current = pageNumber;
   }
 
   const menu = document.querySelector(".menu");
