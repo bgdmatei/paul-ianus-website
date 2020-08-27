@@ -214,3 +214,17 @@ form button:hover {
   background-color: rgb(60, 60, 60);
   color: #fff;
 }
+
+@media only screen and (max-width: 768px) {
+  svg {
+    width: 300px;
+  }
+
+  .pages {
+    display: none;
+  }
+
+  body {
+    overflow: unset;
+  }
+}
