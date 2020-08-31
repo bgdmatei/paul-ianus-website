@@ -215,6 +215,7 @@ form button:hover {
   color: #fff;
 }
 
+/* Iphone responsiveness */
 @media only screen and (max-width: 768px) {
   svg {
     width: 300px;
@@ -232,5 +233,46 @@ form button:hover {
   }
   .nav-open p {
     font-size: 10px;
+  }
+}
+
+/* Ipad responsiveness */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+  .nav-open {
+    transform: translateY(-100%);
+  }
+
+  svg {
+    width: 600px;
+  }
+
+  .pages {
+    display: none;
+  }
+
+  .page {
+    min-height: 90vh;
+  }
+
+  .landing {
+    margin-top: 120px;
+  }
+
+  .ls {
+    margin-top: -500px;
+  }
+
+  .hero {
+    align-self: unset;
+  }
+
+  body {
+    overflow: unset;
+  }
+  .nav-open h3 {
+    font-size: 24px;
+  }
+  .nav-open p {
+    font-size: 24px;
   }
 }
