@@ -236,7 +236,13 @@ form button:hover {
   }
 }
 
-/* Ipad responsiveness */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  svg {
+    width: 600px;
+  }
+}
+
+/* Ipad Pro responsiveness */
 @media only screen and (min-width: 1024px) and (max-width: 1366px) {
   .nav-open {
     transform: translateY(-100%);
